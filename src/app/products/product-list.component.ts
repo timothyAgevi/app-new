@@ -6,5 +6,8 @@ templateUrl:'./product-list.component.html'
 
 })
 export class ProductListComponent{
-    pageTitle:string ='Product List';
+    pageTitle:string ='Product List !';
+    products: any[]=[
+        
+    ]
 }
