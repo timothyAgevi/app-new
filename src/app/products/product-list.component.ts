@@ -12,7 +12,12 @@ export class ProductListComponent implements OnInit{
     imageWidth:number=50;//add properties to class
     imageMargin:number=2;
     showImage:boolean=false;
-    listFilter:string='cart';
+    
+     private _listFilter:string='';
+
+
+
+
     products: IProduct[]=[// import IPoduct interface
         {
             "productId": 5,
