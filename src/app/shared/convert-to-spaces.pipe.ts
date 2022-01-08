@@ -1,6 +1,8 @@
 import { Pipe } from "@angular/core";
 
-@Pipe({}
+@Pipe({
+    name: 'convertToSpaces'
+}
 
 )
 export class ConvertToSpacesPipe{
