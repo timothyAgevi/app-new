@@ -32,4 +32,8 @@ export class ProductListComponent{
             "imageUrl": "assets/images/saw.png"
           }
     ];
+    //methods come after properties
+    toggleImage():void{
+      this.showImage=!this.showImage;
+    }
 }
