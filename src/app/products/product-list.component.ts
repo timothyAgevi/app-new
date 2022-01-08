@@ -12,7 +12,7 @@ export class ProductListComponent{
     imageMargin:number=2;
     showImage:boolean=false;
     listFilter:string='cart';
-    products: IProduct[]=[
+    products: IProduct[]=[// import IPoduct interface
         {
             "productId": 5,
             "productName": "Hammer",
