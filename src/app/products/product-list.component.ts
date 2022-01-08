@@ -9,6 +9,7 @@ export class ProductListComponent{
     pageTitle:string ='Product List !';
     imageWidth:number=50;//add properties to class
     imageMargin:number=2;
+    showImage:boolean=false;
     products: any[]=[
         {
             "productId": 5,
