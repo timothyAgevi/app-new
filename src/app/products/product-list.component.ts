@@ -12,10 +12,15 @@ export class ProductListComponent implements OnInit{
     imageWidth:number=50;//add properties to class
     imageMargin:number=2;
     showImage:boolean=false;
-    
-     private _listFilter:string='';
+    private _listFilter:string='';
+
      get listFilter():string{
        return this._listFilter;
+     }
+     set listFilter(value:string){
+         this._listFilter=value;
+         console.log('In setter :' ,value)
+
      }
 
 
@@ -48,6 +53,6 @@ export class ProductListComponent implements OnInit{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
-        console.log('In OnInit');
+        ;
     }
 }
