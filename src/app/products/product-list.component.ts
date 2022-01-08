@@ -53,6 +53,6 @@ export class ProductListComponent implements OnInit{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
-        ;
+       this._listFilter='cart' ;
     }
 }
