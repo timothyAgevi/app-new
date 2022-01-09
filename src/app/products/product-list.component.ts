@@ -20,12 +20,12 @@ export class ProductListComponent implements OnInit{
      set listFilter(value:string){
          this._listFilter=value;
          console.log('In setter :' ,value)
-
+        this.filteredProducts=this.performFilter(value);
      }
 
 
 
-
+    filteredProducts:IProduct []=[];
     products: IProduct[]=[// import IPoduct interface
         {
             "productId": 5,
@@ -48,11 +48,17 @@ export class ProductListComponent implements OnInit{
             "imageUrl": "assets/images/saw.png"
           }
     ];
+
+    performFilter(filterBy:string):IProduct[]{
+      filterBy=filterBy.toLocaleLowerCase();
+      return this.products.filter((products: IProduct)=>
+      products.productName.toLocaleLowerCase().includes(filterBy))
+    }
     //methods come after properties
     toggleImage():void{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
-       this._listFilter='cart' ;
+       this._listFilter='timo' ;
     }
 }
