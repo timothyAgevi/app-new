@@ -42,7 +42,8 @@ export class ProductListComponent implements OnInit{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
-      this.products= this.productService.getProducts();
+      this.products= this.productService.getProducts();//code to call productService
+      this.filteredProducts=this.products;
        this.listFilter='timo' ;
     }
     onRatingClicked(message:string):void{
