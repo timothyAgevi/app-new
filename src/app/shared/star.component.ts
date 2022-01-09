@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
     styleUrls:[ './star.component.css']
 })
 export class StarComponent{
-
+  rating:number=4;
+  cropwidth:number=75;
 }
