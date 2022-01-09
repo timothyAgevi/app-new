@@ -27,8 +27,8 @@ export class ProductListComponent implements OnInit{
 
 
     filteredProducts:IProduct []=[];
-    products: IProduct[]=[ ]  
-    ;
+    products: IProduct[]=[];
+    
      constructor(private productService :ProductService){
 
      }
@@ -42,6 +42,7 @@ export class ProductListComponent implements OnInit{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
+      this.products= this.productService.getProducts();
        this.listFilter='timo' ;
     }
     onRatingClicked(message:string):void{
