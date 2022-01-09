@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 
 @Component({
 selector:'pm-products',
@@ -48,7 +49,9 @@ export class ProductListComponent implements OnInit{
             "imageUrl": "assets/images/saw.png"
           }
     ];
-
+     constructor(private productService :ProductService){
+       
+     }
     performFilter(filterBy:string):IProduct[]{
       filterBy=filterBy.toLocaleLowerCase();
       return this.products.filter((product: IProduct)=>
