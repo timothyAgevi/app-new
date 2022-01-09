@@ -7,7 +7,7 @@ import { Component, OnChanges, SimpleChanges } from "@angular/core";
 })
 export class StarComponent implements OnChanges{//recalculate cropwidth based on rating
   //onChange
-    rating:number=4;
+    @Input() rating:number=4; // input rating
   cropwidth:number=75;
 
   ngOnChanges(): void {
