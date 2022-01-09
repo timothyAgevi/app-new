@@ -10,7 +10,7 @@ export class StarComponent implements OnChanges{//recalculate cropwidth based on
   //onChange
     @Input() rating:number=0; // input rating
   cropwidth:number=75;
-  @Output()ratingClicked : EventEmitter <string>=
+  @Output() ratingClicked  : EventEmitter <string>=
   new EventEmitter();
 
   ngOnChanges(): void {
