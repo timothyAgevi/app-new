@@ -13,7 +13,7 @@ export class ProductService{
     getProducts():Observable <IProduct[]>{
         return this.http.get<IProduct[]>(this.productUrl).pipe(
           tap(data =>console.log('all',JSON.stringify(data))),
-          
+          catchError(this.handleError)
         ) ;
     }
   
