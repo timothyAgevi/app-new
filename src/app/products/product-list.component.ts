@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit{
     imageMargin:number=2;
     showImage:boolean=false;
     private _listFilter:string='';
-
+    errorMessage:string='';
      get listFilter():string{
        return this._listFilter;
      }
