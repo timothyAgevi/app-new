@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
-
+import { catchError,tap } from "rxjs";
 @Injectable({
     providedIn:'root'
 })
@@ -10,8 +10,8 @@ export class ProductService{
   constructor(private http:HttpClient){
 
   }
-    getProducts():IProduct []{
-        return
+    getProducts():Observable <IProduct[]>{
+        return this.http.get<IProduct[]>(this.productUrl) ;
     }
   
 }
