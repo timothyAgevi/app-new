@@ -13,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http'
     AppComponent,
     ProductListComponent,
     ConvertToSpacesPipe,
-    StarComponent
+    StarComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
