@@ -3,6 +3,8 @@ import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
 import { catchError,tap } from "rxjs";
 import { Observable } from "rxjs";
+import { HttpErrorResponse } from "@angular/common/http";
+
 @Injectable({
     providedIn:'root'
 })
