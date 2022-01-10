@@ -34,6 +34,9 @@ export class ProductListComponent implements OnInit,OnDestroy{
      constructor(private productService :ProductService){
 
      }
+  ngOnDestroy(): void {
+    throw new Error("Method not implemented.");
+  }
     performFilter(filterBy:string):IProduct[]{
       filterBy=filterBy.toLocaleLowerCase();
       return this.products.filter((product: IProduct)=>
@@ -44,19 +47,26 @@ export class ProductListComponent implements OnInit,OnDestroy{
       this.showImage=!this.showImage;
     }
     ngOnInit(): void {
-      this.products= this.productService.getProducts().subscribe({
+      this.sub=  this.productService.getProducts()
+      .subscribe({
         next :products=>{
           this.products= products;
           this.filteredProducts=this.products;
       },
         error:err =>this.errorMessage=err
 
-      });//code to call productService
-     
+      });
+     ngOnDestroy();{
+      this.sub.unsubscribe()
+     }
        
     }
     onRatingClicked(message:string):void{
       this.pageTitle='Product List'  +message;
 
     }
+}
+
+function ngOnDestroy() {
+  throw new Error("Function not implemented.");
 }
