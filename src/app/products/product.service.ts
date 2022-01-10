@@ -1,10 +1,8 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient,HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable ,throwError} from "rxjs";
+import { catchError, map, tap } from 'rxjs/operators';
 import { IProduct } from "./product";
-import { catchError,tap } from "rxjs";
-import { Observable } from "rxjs";
-import { HttpErrorResponse } from "@angular/common/http";
-
 @Injectable({
     providedIn:'root'
 })
@@ -19,17 +17,9 @@ export class ProductService{
           catchError(this.handleError)
         ) ;
     }
-  // Get one product
-  // Since we are working with a json file, we can only retrieve all products
-  // So retrieve all products and then find the one we want using 'map'
-  getProduct(id: number): Observable<IProduct | undefined> {
-    return this.getProducts()
-      .pipe(
-        map((products: IProduct[]) => products.find(p => p.productId === id))
-      );
-  }
+  
 
-  private handleError(err: HttpErrorResponse): Observable<never> {
+  private handleError(err: HttpErrorResponse) {
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console
     let errorMessage = '';
