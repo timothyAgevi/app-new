@@ -12,13 +12,17 @@ import {HttpClientModule} from '@angular/common/http'
   declarations: [
     AppComponent,
     ProductListComponent,
-      ConvertToSpacesPipe,
+    ConvertToSpacesPipe,
     StarComponent,
-    HttpClientModule
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+  ],
+  exports: [
+    ProductListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
