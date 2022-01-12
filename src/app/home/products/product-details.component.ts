@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pm-product-details',
+  //deleted selector since this is Not a nested component
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
