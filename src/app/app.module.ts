@@ -9,6 +9,7 @@ import { StarComponent } from './shared/star.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductDetailsComponent } from './home/products/product-details.component'
 import { WelcomeComponent } from './home/welcome.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WelcomeComponent } from './home/welcome.component';
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    RouterModule
   ],
   imports: [
     BrowserModule,
