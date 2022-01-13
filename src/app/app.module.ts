@@ -8,9 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 
-import { ProductDetailGuard } from './products/product-detail.guard';
 import { ProductModule } from './products/product.module';
-import { ProductListComponent } from './products/product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -32,9 +31,7 @@ import { ProductListComponent } from './products/product-list.component';
     ]),
     ProductModule
   ],
-  exports: [
-    ProductListComponent
-  ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
