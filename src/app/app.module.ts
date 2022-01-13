@@ -7,10 +7,10 @@ import { ProductListComponent } from './products/product-list.component';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ProductDetailsComponent } from './home/products/product-details.component'
+
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
-import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
     ProductListComponent,
     ConvertToSpacesPipe,
     StarComponent,
-    ProductDetailsComponent,
+    ProductDetailComponent,
     WelcomeComponent,
     ProductDetailComponent     
     
@@ -29,7 +29,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
     HttpClientModule,
     RouterModule.forRoot([
       {path:'products',component:ProductListComponent},
-      {path:'products/:id',component:ProductDetailsComponent},
+      {path:'products/:id',component:ProductDetailComponent},
       {path:'welcome',component:WelcomeComponent},
       {path:'',redirectTo:'welcome', pathMatch:'full'},
       {path:'**',redirectTo:'welcome', pathMatch:'full'},

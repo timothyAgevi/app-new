@@ -1,6 +1,7 @@
 
 import { Component } from "@angular/core";
 import { ProductListComponent } from "./products/product-list.component";
+import { ProductDetailComponent } from "./products/product-detail.component";
 @Component({
   selector:'pm-root',
   template: `<nav class='navbar navbar-expand navbar-light bg-light'>
