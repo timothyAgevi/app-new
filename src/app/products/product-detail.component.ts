@@ -9,12 +9,23 @@ import { IProduct } from './product';
 })
 export class ProductDetailComponent implements OnInit {
   pageTitle:string='Product Detail';
-  products:IProduct |undefined;
+  product:IProduct |undefined;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     const id=Number(this.route.snapshot.paramMap.get('id'));
-    this.pageTitle +=` : ${id}`
+    this.pageTitle +=` : ${id}`;
+    this.product={
+      "productId": 8,
+      "productName": "Saw",
+      "productCode": "TBX-0022",
+      "releaseDate": "May 15, 2021",
+      "description": "15-inch steel blade hand saw",
+      "price": 11.55,
+      "starRating": 3.7,
+      "imageUrl": "assets/images/saw.png"
+    }
+
   }
 
 }
