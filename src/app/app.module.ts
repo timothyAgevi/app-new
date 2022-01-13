@@ -25,6 +25,13 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {path:'products',component:ProductListComponent},
+      {path:'products/:id',component:ProductDetailsComponent},
+      {path:'welcome',component:WelcomeComponent},
+      {path:'',redirectTo:'welcome', pathMatch:'full'},
+      {path:'products',component:ProductListComponent},
+    ])
   ],
   exports: [
     ProductListComponent
