@@ -5,6 +5,8 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 import { ProductDetailComponent } from './product-detail.component';
 import { StarComponent } from '../shared/star.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ProductDetailGuard } from './product-detail.guard';
 
 
 
@@ -18,6 +20,12 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule.forChild([
+      {path:'products',component:ProductListComponent},
+      {path:'products/:id',
+      canActivate:[ProductDetailGuard],
+      component:ProductDetailComponent},
+    ])
   ]
 })
 export class ProductModule { }
