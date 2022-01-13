@@ -18,13 +18,13 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailsComponent,
-    WelcomeComponent,
-    RouterModule
+    WelcomeComponent     
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     ProductListComponent
