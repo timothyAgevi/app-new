@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProductDetailsComponent } from './home/products/product-details.component'
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailsComponent,
-    WelcomeComponent     
+    WelcomeComponent,
+    ProductDetailComponent     
     
   ],
   imports: [
