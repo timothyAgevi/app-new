@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductDetailGuard implements CanActivate {
   canActivate(
-    route: ActivatedRouteSnapshot,
+    route: ActivatedRouteSnapshot,//provide current route info
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }
