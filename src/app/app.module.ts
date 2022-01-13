@@ -12,6 +12,7 @@ import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductDetailGuard } from './products/product-detail.guard';
+import { ProductModule } from './products/product.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductDetailGuard } from './products/product-detail.guard';
       {path:'welcome',component:WelcomeComponent},
       {path:'',redirectTo:'welcome', pathMatch:'full'},
       {path:'**',redirectTo:'welcome', pathMatch:'full'},
-    ])
+    ]),
+    ProductModule
   ],
   exports: [
     ProductListComponent
