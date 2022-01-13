@@ -9,10 +9,16 @@ export class ProductDetailGuard implements CanActivate {
 
 
   constructor(private router:Router){}
-  
+
   canActivate(
-    route: ActivatedRouteSnapshot,//provide current route info
+    route: ActivatedRouteSnapshot,//provide current route info e.g parameter
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      const id=Number(route.paramMap.get('id'));
+      if(isNaN(id)|| id<1){
+        alert('error');
+        this.router.navigate( ['/products'])
+        return false;
+      }
     return true;
   }
   
