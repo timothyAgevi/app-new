@@ -25,7 +25,9 @@ export class ProductDetailComponent implements OnInit {
       "starRating": 3.7,
       "imageUrl": "assets/images/saw.png"
     }
-
+   
   }
-
+  onBack():void{
+    this.router.navigate(['/products'])
+  }
 }
