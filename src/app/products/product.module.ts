@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ProductListComponent } from './product-list.component';
-import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
+
 import { ProductDetailComponent } from './product-detail.component';
-import { StarComponent } from '../shared/star.component';
-import { FormsModule } from '@angular/forms';
+
+//deleted formModule
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-detail.guard';
 import { SharedModule } from '../shared/shared.module';
@@ -15,13 +15,11 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ConvertToSpacesPipe,
-    StarComponent
+    
+    
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild([
+  imports: [  
+      RouterModule.forChild([
       {path:'products',component:ProductListComponent},
       {path:'products/:id',
       canActivate:[ProductDetailGuard],
